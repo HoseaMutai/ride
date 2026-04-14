@@ -1,0 +1,29 @@
+<section class="how-container">
+  <div class="header-row">
+    <div class="pill-badge">
+      <div class="icon-circle">
+        <span class="icon">💼</span> </div>
+      <span class="pill-text">How It Works?</span>
+    </div>
+    <p class="header-desc">
+     We specialize in private rides, corporate transport and customized solutions.
+    </p>
+  </div>
+
+  <hr class="section-divider" />
+
+  <div class="steps-grid">
+    @for (step of steps; track step.id) {
+      <div class="step-card">
+        <h2 class="step-id">{{ step.id }}</h2>
+        <div class="line-indicator">
+          <div class="dot" [class.active]="step.isActive"></div>
+          <div class="connector"></div>
+        </div>
+        <h3 class="step-title">{{ step.title }}</h3>
+        <p class="step-desc">{{ step.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+

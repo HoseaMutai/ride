@@ -1,0 +1,134 @@
+$brand-yellow: #ffc439;
+$dark-bg: #111111;
+$text-gray: #666;
+$border-color: #e0e0e0;
+
+.how-container {
+  padding: 5rem 10%;
+  font-family: 'Inter', sans-serif;
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    .pill-badge {
+      display: flex;
+      align-items: center;
+      background-color: $brand-yellow;
+      border-radius: 100px;
+      padding: 0.5rem;
+      min-width: 320px;
+
+      .icon-circle {
+        background-color: $dark-bg;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $brand-yellow;
+        font-size: 1.5rem;
+      }
+
+      .pill-text {
+        font-weight: 800;
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        color: #000;
+      }
+    }
+
+    .header-desc {
+      flex: 1;
+      color: $text-gray;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+  }
+
+  .section-divider {
+    border: 0;
+    border-top: 1px solid $border-color;
+    margin-bottom: 4rem;
+  }
+
+  // Steps Section
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    .step-card {
+      .step-id {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+
+      .line-indicator {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #444; // Default inactive dot
+
+          &.active {
+            background-color: $brand-yellow;
+          }
+        }
+
+        .connector {
+          flex: 1;
+          height: 1px;
+          background-color: $border-color;
+          margin-left: 10px;
+        }
+      }
+
+      .step-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .step-desc {
+        color: $text-gray;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: 992px) {
+  .how-container {
+    padding: 3rem 5%;
+
+    .header-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .how-container .steps-grid {
+    grid-template-columns: 1fr;
+    
+    .connector { display: none; } // Hide lines on mobile stack
+  }
+}

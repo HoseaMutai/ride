@@ -1,0 +1,73 @@
+<section class="admin-hero">
+  <div class="overlay"></div>
+ <app-navbar></app-navbar>
+
+  <!-- <div class="content">
+    <h1>
+      Memorable Ride<br />
+      <span>Experience!!</span>
+    </h1>
+    <p>
+     Your satisfaction our joy.
+    </p>
+  </div> -->
+</section>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <h2>Manage Bookings</h2>
+
+    <div class="actions">
+      <button class="btn delete">
+        <i class="fa fa-trash"></i> Delete
+      </button>
+      
+
+      <a class="btn add">
+        <i class="fa fa-plus"></i> Add New Book
+      </a>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" /></th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>PHONE NO</th>
+        <th>RIDE TYPE</th>
+        <th>PICKUP DATE</th>
+        <th>PICKUP ADDRESS</th>
+        <th>DROPOFF ADDRESS</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for(book of books; track book.id) {
+        <tr>
+        <td><input type="checkbox" /></td>
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.phone}}</td>
+            <td>{{book.ride_type}}</td>
+            <td>{{book.pickup_date}}</td>
+            <td>{{book.pickup_address}}</td>
+            <td>{{book.dropoff_address}}</td>
+
+        <td class="icons">
+          <i class="fa fa-pencil edit"></i>
+          <i class="fa fa-trash delete-icon"></i>
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>
+
+<!--Footer section-->
+<div class="end">
+<app-footer></app-footer>
+</div>

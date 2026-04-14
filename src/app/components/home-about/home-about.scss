@@ -1,0 +1,82 @@
+$primary-yellow: #ffb400; // Adjust to match the specific taxi yellow
+$text-dark: #1a1a1a;
+$text-muted: #666;
+$bg-light-gray: #f2f2f2;
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 4rem 10%;
+  align-items: center;
+  font-family: 'Inter', sans-serif; // Or your preferred sans-serif
+
+  .content-column, .stats-column {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .sub-heading {
+    color: $primary-yellow;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .main-title {
+    color: $text-dark;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 1.5rem 0;
+    font-weight: 800;
+  }
+
+  .description {
+    color: $text-muted;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+  // Stats Section
+  .stat-item {
+    margin-bottom: 2rem;
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: $text-dark;
+
+      .stat-percentage {
+        color: #d35400; // Slightly darker orange/red for the numbers
+      }
+    }
+
+    .progress-bar-bg {
+      background-color: $bg-light-gray;
+      height: 12px;
+      border-radius: 2px;
+      overflow: hidden;
+
+      .progress-bar-fill {
+        background-color: $primary-yellow;
+        height: 100%;
+        transition: width 1s ease-in-out;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 5%;
+    gap: 2rem;
+    
+    .main-title {
+      font-size: 2rem;
+    }
+  }
+}

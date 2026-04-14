@@ -1,0 +1,59 @@
+<section class="contact-hero">
+  <div class="overlay"></div>
+ <app-navbar></app-navbar>
+
+  <div class="content">
+   <h1>Contact Us</h1>
+      <p>
+      Get in Touch with BlackSeat Rides Today
+      </p>
+  </div>
+</section>
+<!--Contact us content-->
+<section class="contact-container">
+  <div class="info-column">
+    <span class="sub-heading">CONTACT US</span>
+    <h1 class="main-title">Get in Touch with BlackSeat Rides Today</h1>
+    <p class="description">
+      Focus on professionalism,punctuality and customer satisfaction.
+    </p>
+
+    <div class="office-section">
+      <h2 class="office-heading">Our Office</h2>
+      <hr class="divider" />
+      
+      <div class="offices-grid">
+        @for (office of offices; track office.country) {
+          <div class="office-item">
+            <h3>{{ office.country }}</h3>
+            <div class="contact-detail">
+              <span class="icon">📍</span>
+              <p>{{ office.address }}</p>
+            </div>
+            <div class="contact-detail">
+              <span class="icon">📞</span>
+              <p>{{ office.phone }}</p>
+            </div>
+            <div class="contact-detail">
+              <span class="icon">📧</span>
+              <p>{{ office.email }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="image-column">
+    <img src="images/11.png" alt="Support representative" class="support-img">
+  </div>
+</section>
+<!--Booking Form-->
+<app-home-book></app-home-book>
+<!--Why us-->
+<app-why-us></app-why-us>
+<!--Footer Section-->
+<app-footer></app-footer>
+
+
+

@@ -1,0 +1,23 @@
+<section class="about-container">
+  <div class="content-column">
+    <span class="sub-heading">ABOUT US</span>
+    <h1 class="main-title">Empowering Your Travel Experience with BlackSeat</h1>
+    <p class="description">
+    We operate 24/7 to ensure our clients access transport services anytime..
+    </p>
+  </div>
+
+  <div class="stats-column">
+    @for (stat of stats; track stat.label) {
+      <div class="stat-item">
+        <div class="stat-header">
+          <span class="stat-label">{{ stat.label }}</span>
+          <span class="stat-percentage">{{ stat.value }}%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" [style.width.%]="stat.value"></div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
